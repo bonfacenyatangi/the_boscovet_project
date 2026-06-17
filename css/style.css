@@ -174,10 +174,60 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
 }
 
-/* reduce logo size to fit tighter header */
+.site-logo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    text-decoration: none;
+    color: #f5f1e9;
+}
+
+.site-logo {
+    display: block;
+    width: auto;
+    height: 54px;
+    max-width: 96px;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.site-brand-text {
+    color: #f5f1e9;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.site-logo-link:hover .site-brand-text {
+    color: var(--boscovet-accent);
+}
+
 .top-bar h1 {
     font-size: 1.5rem;
     margin: 0;
+}
+
+@media (max-width: 991.98px) {
+    .top-bar {
+        padding: 0 24px;
+    }
+
+    .site-logo-link {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .site-logo {
+        height: 46px;
+        max-width: 82px;
+    }
+
+    .site-brand-text {
+        font-size: 1.05rem;
+    }
 }
 
 
